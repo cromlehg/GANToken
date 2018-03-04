@@ -52,7 +52,7 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 * _Advisors tokens percent_                      : 6%
 * _Marketing and Audit (Service) tokens percent_ : 2%
 * _For sale tokens percent_                      : 85%
-* __Additionally minted tokens as (1 200 000 000 - distributed) to Global-ads Fund Fund wallet with 12 month freeze)__
+* __Additionally minted tokens (1 200 000 000 minus distributed) to Global-ads Fund Fund wallet with 12 month freeze)__
 
 Tokens can be mint additionaly if needs to Global-ads Fund wallet with freeze.
 
