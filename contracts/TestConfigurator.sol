@@ -113,7 +113,7 @@ contract TestConfigurator is Ownable {
 
     ico.setGAFFTokensWallet(gaffTokensWallet);
     gaffTokensWallet.setPeriod(360);
-    teamTokensWallet.setToken(token);
+    gaffTokensWallet.setToken(token);
     gaffTokensWallet.transferOwnership(ico);
 
     token.transferOwnership(owner);
