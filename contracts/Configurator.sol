@@ -55,11 +55,13 @@ contract Configurator is Ownable {
 
     FreezeTokensWallet teamTokensWallet = new FreezeTokensWallet();
     teamTokensWallet.setPeriod(360);
+    teamTokensWallet.setToken(token);
     ico.setTeamTokensWallet(teamTokensWallet);
     teamTokensWallet.transferOwnership(ico);
 
     FreezeTokensWallet gaffTokensWallet = new FreezeTokensWallet();
     gaffTokensWallet.setPeriod(360);
+    gaffTokensWallet.setToken(token);
     ico.setGAFFTokensWallet(gaffTokensWallet);
     gaffTokensWallet.transferOwnership(ico);
 
