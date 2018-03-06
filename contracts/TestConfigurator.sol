@@ -75,30 +75,30 @@ contract TestConfigurator is Ownable {
   }
 
   function deploy() public onlyOwner {
-    preICO.setStart(1518393600);
-    preICO.setWallet(0xa86780383E35De330918D8e4195D671140A60A74);
+    preICO.setStart(1520208000); // 05 Mar 2018 00:00:00 GMT
+    preICO.setWallet(0x8fD94be56237EA9D854B23B78615775121Dd1E82);
     preICO.addMilestone(1, 40);
     preICO.addMilestone(13, 30);
     preICO.setPrice(8600000000000000000000);
     preICO.setMinInvestedLimit(100000000000000000);
-    preICO.setHardcap(17500000000000000000000);
-    preICO.setSoftcap(3500000000000000000000);
+    preICO.setHardcap(1750000000000000000);
+    preICO.setSoftcap(350000000000000000);
     preICO.setToken(token);
 
     token.setSaleAgent(preICO);
     preICO.setNextSaleAgent(ico);
 
-    ico.setStart(1520640000);
-    ico.setWallet(0x98882D176234AEb736bbBDB173a8D24794A3b085);
+    ico.setStart(1520208000); // 05 Mar 2018 00:00:00 GMT
+    ico.setWallet(0x8fD94be56237EA9D854B23B78615775121Dd1E82);
     ico.addMilestone(7, 25);
     ico.addMilestone(7, 15);
     ico.addMilestone(14, 10);
     ico.setPrice(8600000000000000000000);
     ico.setMinInvestedLimit(100000000000000000);
     ico.setHardcap(40500000000000000000000);
-    ico.setBountyTokensWallet(0x28732f6dc12606D529a020b9ac04C9d6f881D3c5);
-    ico.setAdvisorsTokensWallet(0x28732f6dc12606D529a020b9ac04C9d6f881D3c5);
-    ico.setServiceTokensWallet(0x28732f6dc12606D529a020b9ac04C9d6f881D3c5);
+    ico.setBountyTokensWallet(0x8Ba7Aa817e5E0cB27D9c146A452Ea8273f8EFF29);
+    ico.setAdvisorsTokensWallet(0x24a7774d0eba02846580A214eeca955214cA776C);
+    ico.setServiceTokensWallet(0xaa8ed6878a202eF6aFC518a64D2ccB8D73f1f2Ca);
     ico.setAdvisorsTokensPercent(6);
     ico.setBountyTokensPercent(2);
     ico.setTeamTokensPercent(5);
