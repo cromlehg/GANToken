@@ -36,7 +36,7 @@ export default function (Token, FoundersWallet, wallets) {
     await token.finishMinting({from: wallets[1]});
     await foundersWallet.start({from: wallets[1]});
     const unlock = await foundersWallet.unlockDate();
-    await increaseTimeTo(unlock - duration.seconds(1));
+    await increaseTimeTo(unlock - duration.seconds(100));
     await foundersWallet.retrieveTokens(wallets[2], {from: wallets[1]}).should.be.rejectedWith(EVMRevert);
   });
 
@@ -45,7 +45,7 @@ export default function (Token, FoundersWallet, wallets) {
     await token.finishMinting({from: wallets[1]});
     await foundersWallet.start({from: wallets[1]});
     const unlock = await foundersWallet.unlockDate();
-    await increaseTimeTo(unlock + duration.seconds(1));
+    await increaseTimeTo(unlock + duration.seconds(100));
     await foundersWallet.retrieveTokens(wallets[2], {from: wallets[1]});
     const balance = await token.balanceOf(wallets[2]);
     assert.equal(balance, 100);
