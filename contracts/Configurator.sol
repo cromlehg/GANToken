@@ -15,6 +15,10 @@ contract Configurator is Ownable {
 
   ICO public ico;
 
+  FreezeTokensWallet public teamTokensWallet;
+
+  FreezeTokensWallet public gaffTokensWallet;
+
   function deploy() public onlyOwner {
 
     token = new GANToken();
@@ -53,13 +57,13 @@ contract Configurator is Ownable {
     ico.setServiceTokensPercent(2);
     ico.setTokensLimit(1200000000000000000000000000);
 
-    FreezeTokensWallet teamTokensWallet = new FreezeTokensWallet();
+    teamTokensWallet = new FreezeTokensWallet();
     teamTokensWallet.setPeriod(360);
     teamTokensWallet.setToken(token);
     ico.setTeamTokensWallet(teamTokensWallet);
     teamTokensWallet.transferOwnership(ico);
 
-    FreezeTokensWallet gaffTokensWallet = new FreezeTokensWallet();
+    gaffTokensWallet = new FreezeTokensWallet();
     gaffTokensWallet.setPeriod(360);
     gaffTokensWallet.setToken(token);
     ico.setGAFFTokensWallet(gaffTokensWallet);

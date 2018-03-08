@@ -35,10 +35,14 @@ contract('Configurator integration test', function (accounts) {
     const tokenAddress = await configurator.token();
     const preicoAddress = await configurator.preICO();
     const icoAddress = await configurator.ico();
+    const teamwalletAddress = await configurator.teamTokensWallet();
+    const gaffalletAddress = await configurator.gaffTokensWallet();
 
     token = await Token.at(tokenAddress);
     preico = await PreICO.at(preicoAddress);
     ico = await ICO.at(icoAddress);
+    teamwallet = await ICO.at(teamwalletAddress);
+    gaffwallet = await ICO.at(gaffalletAddress);
   });
 
   it('contracts should have token address', async function () {
@@ -54,6 +58,20 @@ contract('Configurator integration test', function (accounts) {
   it('contracts should have ICO address', async function () {
     const icoOwner = await ico.owner();
     icoOwner.should.bignumber.equal(manager);
+  });
+
+  it('ICO should have team wallet address', async function () {
+    const teamwalletOwner = await teamwallet.owner();
+    teamwalletOwner.should.bignumber.equal(ico.address);
+    const walletAddress = await ico.teamTokensWallet();
+    teamwallet.address.should.bignumber.equal(walletAddress);
+  });
+
+  it('ICO should have gaff wallet address', async function () {
+    const gaffwalletOwner = await gaffwallet.owner();
+    gaffwalletOwner.should.bignumber.equal(ico.address);
+    const walletAddress = await ico.gaffTokensWallet();
+    gaffwallet.address.should.bignumber.equal(walletAddress);
   });
 
   it('preICO and ICO should have start time as described in README', async function () {
