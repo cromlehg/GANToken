@@ -24,7 +24,7 @@ contract('Configurator integration test', function (accounts) {
   let teamwallet;
   let gaffwallet;
 
-  const manager = '0x675eDE27cafc8Bd07bFCDa6fEF6ac25031c74766';
+  const manager = '0xAa2e8e600c3874BD26a86c9A5873a24b855Be1EC';
 
   before(async function () {
     // Advance to the next block to correctly read time in the solidity "now" function interpreted by testrpc
@@ -120,18 +120,18 @@ contract('Configurator integration test', function (accounts) {
 
   it ('preICO and ICO should have wallets as described in README', async function () {
     const preicoWallet = await preico.wallet();
-    preicoWallet.should.bignumber.equal('0xa86780383E35De330918D8e4195D671140A60A74');
+    preicoWallet.should.bignumber.equal('0x1AA6F6c5bd4f56e2f57a5F8c0ECC549E9A8a944D');
     const icoWallet = await ico.wallet();
-    icoWallet.should.bignumber.equal('0x98882D176234AEb736bbBDB173a8D24794A3b085');
+    icoWallet.should.bignumber.equal('0x4fcE3E532Aadd2119fd9012971D9E161aB27896E');
   });
 
   it ('bounty wallet, advisors wallet, service wallet should be as described in README', async function () {
     const bountyWallet = await ico.bountyTokensWallet();
-    bountyWallet.should.bignumber.equal('0x28732f6dc12606D529a020b9ac04C9d6f881D3c5');
+    bountyWallet.should.bignumber.equal('0x0CAb6DA6020489DD510bA88A891b7D08c905254A');
     const advisorsWallet = await ico.advisorsTokensWallet();
-    advisorsWallet.should.bignumber.equal('0x28732f6dc12606D529a020b9ac04C9d6f881D3c5');
+    advisorsWallet.should.bignumber.equal('0x8B7a83c35CAdedC04BA73b874705661DC2039335');
     const serviceWallet = await ico.serviceTokensWallet();
-    serviceWallet.should.bignumber.equal('0x28732f6dc12606D529a020b9ac04C9d6f881D3c5');
+    serviceWallet.should.bignumber.equal('0x0b06DE4D5BB9D06B702fED24C763E976B7d3c36f');
   });
 
 });

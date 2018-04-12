@@ -58,10 +58,10 @@ Tokens can be mint additionaly if needs to Global-ads Fund wallet with freeze.
 
 ## Main network configuration
 
-* _Bounty tokens wallet_                         : 
-* _Advisors tokens wallet_                       : 
-* _Marketing and Audit (Service) tokens wallet_  :
-* _Contracts manager_                            :
+* _Bounty tokens wallet_                         : 0x0CAb6DA6020489DD510bA88A891b7D08c905254A
+* _Advisors tokens wallet_                       : 0x8B7a83c35CAdedC04BA73b874705661DC2039335
+* _Marketing and Audit (Service) tokens wallet_  : 0x0b06DE4D5BB9D06B702fED24C763E976B7d3c36f
+* _Contracts manager_                            : 0xAa2e8e600c3874BD26a86c9A5873a24b855Be1EC
 
 ### Links
 1. _Token_ -
@@ -80,7 +80,7 @@ Tokens can be mint additionaly if needs to Global-ads Fund wallet with freeze.
 * _Hardcap_                     : 17 500 ETH
 * _Softcap_                     : 3500 ETH
 * _Start_                       : 
-* _Wallet_                      : 
+* _Wallet_                      : 0x1AA6F6c5bd4f56e2f57a5F8c0ECC549E9A8a944D
 
 ##### Milestones
 1. 1 day, bonus +40%
@@ -91,7 +91,7 @@ Tokens can be mint additionaly if needs to Global-ads Fund wallet with freeze.
 * _Base price_                  : 1 ETH = 8600 Tokens
 * _Hardcap_                     : 40 500 ETH
 * _Start_                       : 
-* _Wallet_                      : 
+* _Wallet_                      : 0x4fcE3E532Aadd2119fd9012971D9E161aB27896E
  
 ##### Milestones
 1. 7 days, bonus +25%
